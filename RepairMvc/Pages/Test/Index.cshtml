@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Test page";
+}
+
+<div>
+    <form method="post">
+        <label>Name</label>
+        <input asp-for="Product.Name" />
+        <label>Description</label>
+        <input asp-for="Product.Description" />
+        <label>Part Type</label>
+        <input asp-for="Product.PartType" />
+        <label>Price</label>
+        <input asp-for="Product.Price" />
+        <input type="submit" value="Save Product" />
+    </form>
+</div>
+
+@section scripts {
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="~/js/admin/main.js"></script>
+}
