@@ -18,16 +18,22 @@
 
     <button v-on:click="getProducts">Get Products</button>
     <div>
-        <p v-for="(product) in products">
-            {{product.name}} - {{product.partType}} - {{product.price}}
+        <p v-for="(product, index) in products">
+            {{product.productId}} - {{product.name}} - {{product.partType}} - {{product.price}}
+            {{product.description}}
+            <button v-on:click="editProduct(product, index)">Edit</button>
+            <button v-on:click="deleteProduct(product.productId)">Remove</button>
         </p>
     </div>
 
     <div>
         <input v-model="productModel.name" />
         <input v-model="productModel.description" />
+        <input v-model="productModel.partType" />
         <input v-model="productModel.price" />
-        <button @@click="createProduct">Create Product</button>
+
+        <button v-on:click="createProduct">Create Product</button>
+        <button v-on:click="updateProduct">Update Product</button>
     </div>
 
 </div>

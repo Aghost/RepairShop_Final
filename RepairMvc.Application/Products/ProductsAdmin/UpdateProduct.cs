@@ -16,12 +16,21 @@ namespace RepairMvc.Application.ProductsAdmin
             _context = context;
         }
 
-        public async Task Do(ProductViewModel vm)
+        public async Task<Response> Do(Request request)
         {
             await _context.SaveChangesAsync();
+
+            return new Response();
+        }
+        public class Request
+        {
+            public string Name { get; set; }
+            public PartType PartType { get; set; }
+            public string Description { get; set; }
+            public decimal Price { get; set; }
         }
 
-        public class ProductViewModel
+        public class Response
         {
             public int ProductId { get; set; }
             public string Name { get; set; }
@@ -29,7 +38,5 @@ namespace RepairMvc.Application.ProductsAdmin
             public string Description { get; set; }
             public decimal Price { get; set; }
         }
-
-
     }
 }

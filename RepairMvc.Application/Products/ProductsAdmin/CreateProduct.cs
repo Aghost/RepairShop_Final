@@ -15,21 +15,39 @@ namespace RepairMvc.Application.ProductsAdmin
             _context = context;
         }
 
-        public async Task Do(ProductViewModel vm)
+        public async Task<Response> Do(Request request)
         {
-            _context.Products.Add(new Product
+            var product = new Product
             {
-                ProductId = vm.ProductId,
-                Name = vm.Name,
-                PartType = vm.PartType,
-                Description = vm.Description,
-                Price = vm.Price
-            });
+                Name = request.Name,
+                PartType = request.PartType,
+                Description = request.Description,
+                Price = request.Price
+            };
+
+            _context.Products.Add(product);
 
             await _context.SaveChangesAsync();
+
+            return new Response
+            {
+                ProductId = product.ProductId,
+                Name = product.Name,
+                PartType = product.PartType,
+                Description = product.Description,
+                Price = product.Price
+            };
         }
 
-        public class ProductViewModel
+        public class Request
+        {
+            public string Name { get; set; }
+            public PartType PartType { get; set; }
+            public string Description { get; set; }
+            public decimal Price { get; set; }
+        }
+
+        public class Response
         {
             public int ProductId { get; set; }
             public string Name { get; set; }

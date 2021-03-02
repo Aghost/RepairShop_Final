@@ -32,6 +32,7 @@ namespace RepairMvc.Application.Products
             public PartType PartType { get; set; }
             public string Description { get; set; }
             public decimal Price { get; set; }
+
         }
     }
 }
