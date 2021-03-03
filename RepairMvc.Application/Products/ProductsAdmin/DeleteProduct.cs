@@ -19,6 +19,7 @@ namespace RepairMvc.Application.ProductsAdmin
         public async Task<bool> Do(int id)
         {
             var Product = _context.Products.FirstOrDefault(x => x.ProductId == id);
+
             _context.Products.Remove(Product);
             await _context.SaveChangesAsync();
 

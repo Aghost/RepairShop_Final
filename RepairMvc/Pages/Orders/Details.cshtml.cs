@@ -30,6 +30,7 @@ namespace RepairMvc.Pages.Orders
 
             Order = await _context.Orders.FirstOrDefaultAsync(m => m.OrderId == id);
 
+            // Lazy loading, orderproducts tabel laad niet automatisch
             if (Order == null)
             {
                 return NotFound();

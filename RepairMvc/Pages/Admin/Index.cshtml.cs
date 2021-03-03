@@ -21,6 +21,8 @@ namespace RepairMvc.Pages.Admin
 
         public IList<Product> Product { get; set; }
 
+        public string[] PartTypes = Enum.GetNames(typeof(PartType));
+
         public async Task OnGetAsync()
         {
             Product = await _context.Products.ToListAsync();

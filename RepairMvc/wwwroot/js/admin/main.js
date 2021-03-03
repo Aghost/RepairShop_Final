@@ -2,15 +2,19 @@
     el: '#app',
     data: {
         loading: false,
+        editing: false,
         objectIndex: 0,
         productModel: {
             productId: 0,
             name: "Product Name",
             partType: "",
             description: "Product Description",
-            price: 1.99
+            price: 1.99,
         },
-        products: []
+        products: [],
+    },
+    mounted() {
+        this.getProducts();
     },
     methods: {
         getProduct(id) {
@@ -53,6 +57,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         updateProduct() {
@@ -67,6 +72,7 @@
                 })
                 .then(() => {
                     this.loading = false;
+                    this.editing = false;
                 });
         },
         deleteProduct(id, index) {
@@ -83,8 +89,13 @@
                     this.loading = false;
                 });
         },
+        newProduct() {
+            this.editing = true;
+            this.productModel.productId = 0;
+        },
         editProduct(product, index) {
-            this.objectIndex = index,
+            this.editing = true;
+            this.objectIndex = index;
             this.productModel = {
                 productId: product.productId,
                 name: product.name,
@@ -92,6 +103,9 @@
                 description: product.description,
                 price: product.price,
             };
+        },
+        cancel() {
+            this.editing = false;
         }
     },
     computed: {

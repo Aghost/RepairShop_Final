@@ -20,11 +20,14 @@ namespace RepairMvc.Pages.Orders
             _context = context;
         }
 
+        //public Order Order2 { get; set; }
         public IList<Order> Order { get; set; }
 
         public async Task OnGetAsync()
         {
             Order = await _context.Orders.ToListAsync();
+
+            //Order2 = await _context.Order2.FirstOrDefaultAsync(m => m.OrderId == m.OrderId);
         }
     }
 }
