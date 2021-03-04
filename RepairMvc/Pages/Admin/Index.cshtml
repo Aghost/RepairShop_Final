@@ -2,26 +2,64 @@
 @model RepairMvc.Pages.Admin.IndexModel
 @{
     ViewData["Title"] = "Admin page";
-    Layout = "~/Pages/Shared/_Layout.cshtml";
+    Layout = "~/Pages/Admin/_AdminLayout.cshtml";
 }
 
 <div id="app" class="container">
-
-    <div class="columns">
-        <div class="column is-3">
-            <div class="menu">
-                <p class="menu-label">Admin</p>
-                <ul class="menu-list">
-                    <li><a>Products</a></li>
-                    <li><a>Orders</a></li>
-                    <li><a>RepairOrders</a></li>
-                    <li><a>Stock</a></li>
-                </ul>
-            </div>
+    <div>
+        <div v-if="!editing">
+            <button class="button" v-on:click="newProduct">Add New Product</button>
+            <table class="table">
+                <tr>
+                    <th>productId</th>
+                    <th>name</th>
+                    <th>partType</th>
+                    <th>price</th>
+                    <th></th>
+                </tr>
+                <tr v-for="(product, index) in products">
+                    <td>{{product.productId}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.partType}}</td>
+                    <td>{{product.price}}</td>
+                    <td><button v-on:click="editProduct(product, index)">Edit</button></td>
+                    <td><button v-on:click="deleteProduct(product.productId)">Remove</button></td>
+                </tr>
+            </table>
         </div>
 
-        <div class="column is-9">
-            <product-manager></product-manager>
+        <div v-else>
+            <div class="field">
+                <label class="label">Product Name</label>
+                <div class="control">
+                    <input class="input" v-model="productModel.name" />
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="label">Product PartType</label>
+                    <input class="input" v-model="productModel.partType" />
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="label">Product Description</label>
+                    <input class="input" v-model="productModel.description" />
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="label">Product Price</label>
+                    <input class="input" v-model="productModel.price" />
+                </div>
+            </div>
+
+            <button class="button is-success" v-on:click="createProduct" v-if="!productModel.productId">Create Product</button>
+            <button class="button is-warning" v-on:click="updateProduct" v-else>Update Product</button>
+            <button class="button is-warning" v-on:click="cancel">Cancel</button>
         </div>
     </div>
 </div>
@@ -74,9 +112,9 @@
 </table>
 -->
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 @section scripts {
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="~/js/admin/product-component.js"></script>
-    <script src="~/js/admin/main.js"></script>
+    <script src="~/js/admin/products.js"></script>
 }
