@@ -22,9 +22,8 @@ namespace RepairMvc.Application.StockAdmin
                 .Include(x => x.Stock)
                 .Select(x => new ProductViewModel
                 {
-                    Id = x.ProductId,
+                    ProductId = x.ProductId,
                     Description = x.Description,
-
                     Stock = x.Stock.Select(y => new StockViewModel
                     {
                         Id = y.StockId,
@@ -33,7 +32,7 @@ namespace RepairMvc.Application.StockAdmin
                     })
                 })
                 .ToList();
-
+                    
             return stock;
         }
 
@@ -46,10 +45,9 @@ namespace RepairMvc.Application.StockAdmin
 
         public class ProductViewModel
         {
-            public int Id { get; set; }
+            public int ProductId { get; set; }
             public string Description { get; set; }
             public IEnumerable<StockViewModel> Stock { get; set; }
-            
         }
     }
 }

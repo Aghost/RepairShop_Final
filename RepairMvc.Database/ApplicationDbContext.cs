@@ -25,7 +25,6 @@ namespace RepairMvc.Database
                 .HasKey(x => new { x.ProductId, x.OrderId });
 
             modelBuilder.Entity<Product>().Property(x => x.Price).HasPrecision(11, 2);
-
         }
     }
 }

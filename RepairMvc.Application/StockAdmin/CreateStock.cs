@@ -20,9 +20,9 @@ namespace RepairMvc.Application.StockAdmin
         {
             var stock = new Stock
             {
-                ProductId = request.ProductId,
                 Description = request.Description,
-                Quantity = request.Quantity
+                Quantity = request.Quantity,
+                ProductId = request.ProductId
             };
 
             _ctx.Stock.Add(stock);
@@ -31,7 +31,7 @@ namespace RepairMvc.Application.StockAdmin
 
             return new Response
             {
-                Id = stock.ProductId,
+                Id = stock.StockId,
                 Description = stock.Description,
                 Quantity = stock.Quantity
             };

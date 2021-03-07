@@ -1,0 +1,57 @@
+﻿@page
+@model RepairMvc.Pages.About.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<p class="title">About</p>
+
+<article class="message is-info">
+    <div class="message-header">
+        <p>Sql-server and Entity Framework</p>
+        <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        <p><strong>Code first</strong> database, using <strong>Entity Framework</strong> to generate the database tables.</p>
+        <p><strong>Sql Querries</strong> to fill the database with default products.</p>
+        <p>Scaffolded <strong>Identity</strong> into the project, Appuser inherits from the IdentityUser class.</p>
+    </div>
+</article>
+
+<article class="message is-info">
+    <div class="message-header">
+        <p>Mvc and Razorpages</p>
+        <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        <strong>MVC:</strong>
+        <p>Models -> RepairMvcDomain.Models</p>
+        <p>Views -> RepairMvc.Pages</p>
+        <p>Controllers -> RepairMvc.Controllers</p>
+</div>
+</article>
+
+<article class="message is-info">
+    <div class="message-header">
+        <p>Vue.js, Axios http client and Bulma.css frontend</p>
+        <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+        <p><strong>Vue.js</strong></p>
+        <p>
+            open-source model–view–viewmodel front end.
+            JavaScript framework for building user interfaces
+            and single-page applications.
+        </p>
+        <p><strong>Axios</strong></p>
+        <p>
+            A promise based http client.
+        </p>
+        <p><strong>Bulma.css</strong></p>
+        <p>
+            Library for Css Styling.
+        </p>
+    </div>
+</article>

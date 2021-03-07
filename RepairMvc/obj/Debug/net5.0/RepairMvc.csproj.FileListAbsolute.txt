@@ -89,10 +89,6 @@ C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\RepairMvc
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\RepairMvc.genruntimeconfig.cache
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\bin\Debug\net5.0\RepairMvc.Application.dll
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\bin\Debug\net5.0\RepairMvc.Application.pdb
-C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Create.cshtml.g.cs
-C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Delete.cshtml.g.cs
-C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Details.cshtml.g.cs
-C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Edit.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Index.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Orders\Create.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Orders\Delete.cshtml.g.cs
@@ -101,7 +97,6 @@ C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pag
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Orders\Index.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Products\Details.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Products\Index.cshtml.g.cs
-C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Test\Index.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
@@ -111,3 +106,8 @@ C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pag
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Orders.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\RepairOrders.cshtml.g.cs
 C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\Stock.cshtml.g.cs
+C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\bckup\Create.cshtml.g.cs
+C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\bckup\Delete.cshtml.g.cs
+C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\bckup\Details.cshtml.g.cs
+C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\Admin\bckup\Edit.cshtml.g.cs
+C:\Users\deploy\source\repos\RepairShop_mvc\RepairMvc\obj\Debug\net5.0\Razor\Pages\About\Index.cshtml.g.cs

@@ -1,14 +1,11 @@
 ﻿@page
 @model RepairMvc.Pages.Admin.IndexModel
 @{
-    ViewData["Title"] = "Admin page";
-    Layout = "~/Pages/Admin/_AdminLayout.cshtml";
 }
 
 <div id="app" class="container">
     <div>
         <div v-if="!editing">
-            <button class="button" v-on:click="newProduct">Add New Product</button>
             <table class="table">
                 <tr>
                     <th>productId</th>
@@ -26,6 +23,7 @@
                     <td><button v-on:click="deleteProduct(product.productId)">Remove</button></td>
                 </tr>
             </table>
+            <button class="button is-success" v-on:click="newProduct">Add New Product</button>
         </div>
 
         <div v-else>
@@ -63,57 +61,6 @@
         </div>
     </div>
 </div>
-
-<!--
-
-     <p v-for="(partType, index) in products.partTypes">
-
-        </p>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].PartType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].Price)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Product)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PartType)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a>
-                    <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a>
-                    <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
--->
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 @section scripts {
     <script src="~/js/admin/products.js"></script>

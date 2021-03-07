@@ -35,8 +35,6 @@ namespace RepairMvc.Controllers
 
 
 
-
-
         [HttpGet("stocks")]
         public IActionResult GetStock() => Ok(new GetStock(_context).Do());
 
