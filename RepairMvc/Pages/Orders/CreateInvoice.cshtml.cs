@@ -29,6 +29,8 @@ namespace RepairMvc.Pages.Orders
             {
                 return NotFound();
             }
+
+
             /*
              * De data verwijzing naar de Products kan door de one to many relatie tussen Product, Productlist en repairorder kan niet
              * Deze moet volgensm mij via een nieuwe variabele Die ene Product Product op regel 23 en Product = await _contet op regel 38
@@ -39,6 +41,8 @@ namespace RepairMvc.Pages.Orders
             // ~~~~~~ TEST ~~~~~~
             //var OrderProductsProducts = from o in OrderProducts where o.OrderId == Order.OrderId select o.Product;
             var OrderProductsProducts = from o in OrderProducts where o.OrderId == 1 select o.Product;
+
+            
 
             if (Order == null)
             {

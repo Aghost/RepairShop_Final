@@ -24,10 +24,10 @@ namespace RepairMvc.Application.StockAdmin
             {
                 stocks.Add(new Stock
                 {
-                    StockId = stock.Id,
-                    ProductId = stock.ProductId,
+                    StockId = stock.StockId,
                     Description = stock.Description,
-                    Quantity = stock.Quantity
+                    Quantity = stock.Quantity,
+                    ProductId = stock.ProductId
                 });
             }
 
@@ -43,10 +43,10 @@ namespace RepairMvc.Application.StockAdmin
 
         public class StockViewModel
         {
-            public int Id { get; set; }
-            public int ProductId { get; set; }
+            public int StockId { get; set; }
             public string Description { get; set; }
             public int Quantity { get; set; }
+            public int ProductId { get; set; }
         }
 
         public class Request

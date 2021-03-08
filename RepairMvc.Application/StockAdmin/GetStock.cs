@@ -26,7 +26,7 @@ namespace RepairMvc.Application.StockAdmin
                     Description = x.Description,
                     Stock = x.Stock.Select(y => new StockViewModel
                     {
-                        Id = y.StockId,
+                        StockId = y.StockId,
                         Description = y.Description,
                         Quantity = y.Quantity
                     })
@@ -38,7 +38,7 @@ namespace RepairMvc.Application.StockAdmin
 
         public class StockViewModel
         {
-            public int Id { get; set; }
+            public int StockId { get; set; }
             public string Description { get; set; }
             public int Quantity { get; set; }
         }

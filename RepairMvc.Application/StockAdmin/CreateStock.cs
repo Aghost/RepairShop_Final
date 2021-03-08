@@ -31,7 +31,7 @@ namespace RepairMvc.Application.StockAdmin
 
             return new Response
             {
-                Id = stock.StockId,
+                StockId = stock.StockId,
                 Description = stock.Description,
                 Quantity = stock.Quantity
             };
@@ -46,7 +46,7 @@ namespace RepairMvc.Application.StockAdmin
 
         public class Response
         {
-            public int Id { get; set; }
+            public int StockId { get; set; }
             public string Description{ get; set; }
             public int Quantity { get; set; }
         }

@@ -28,7 +28,27 @@
                 });
         },
         updateStock() {
-
+            this.loading = true;
+            axios.put('/Admin/stocks/', {
+                stock: this.selectProduct.stock.map(x => {
+                    return {
+                        stockId: x.stockId,
+                        description: x.description,
+                        quantity: x.quantity,
+                        productId: this.selectedProduct.productId
+                    };
+                })
+            })
+                .then(res => {
+                    console.log(res);
+                    this.selectedProduct.stock.splice(index, 1);
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+                .then(() => {
+                    this.loading = false;
+                });
         },
         deleteStock(id, index) {
             this.loading = true;
@@ -60,7 +80,7 @@
         },
         selectProduct(product) {
             this.selectedProduct = product;
-            this.newStock.productId = product.id;
+            this.newStock.productId = product.productId;
         },
     }
 });

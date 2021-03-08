@@ -54,7 +54,6 @@ namespace RepairMvc.Domain.Models
         [MaxLength(500)]
         [Display(Name = "Work Report")]
         public string WorkReport { get; set; }
-
         public ICollection<OrderProduct> OrderProducts { get; set; }
     }
 }
