@@ -55,5 +55,63 @@ namespace RepairMvc.Domain.Models
         [Display(Name = "Work Report")]
         public string WorkReport { get; set; }
         public ICollection<OrderProduct> OrderProducts { get; set; }
+
+        //~~~~~~~~ All Parts ~~~~~~~~
+        //Part 1
+        [Display(Name = "Part 1")]
+        public Product Part1 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID1 { get; set; }
+        [Display(Name = "Quantity Part 1")]
+        public int Part1Quantity { get; set; }
+        //Part 2
+        [Display(Name = "Part 2")]
+        public Product Part2 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID2 { get; set; }
+        [Display(Name = "Quantity Part 2")]
+        public int Part2Quantity { get; set; }
+        //Part 3
+        [Display(Name = "Part 3")]
+        public Product Part3 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID3 { get; set; }
+        [Display(Name = "Quantity Part 3")]
+        public int Part3Quantity { get; set; }
+        //Part 4
+        [Display(Name = "Part 4")]
+        public Product Part4 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID4 { get; set; }
+        [Display(Name = "Quantity Part 4")]
+        public int Part4Quantity { get; set; }
+        //Part 5
+        [Display(Name = "Part 5")]
+        public Product Part5 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID5 { get; set; }
+        [Display(Name = "Quantity Part 5")]
+        public int Part5Quantity { get; set; }
+        //Part 6
+        [Display(Name = "Part 6")]
+        public Product Part6 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID6 { get; set; }
+        [Display(Name = "Quantity Part 6")]
+        public int Part6Quantity { get; set; }
+        //Part 7
+        [Display(Name = "Part 7")]
+        public Product Part7 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID7 { get; set; }
+        [Display(Name = "Quantity Part 7")]
+        public int Part7Quantity { get; set; }
+        //Part 8
+        [Display(Name = "Part 8")]
+        public Product Part8 { get; set; }
+        [ForeignKey("ProductId")]
+        public int? PartID8 { get; set; }
+        [Display(Name = "Quantity Part 8")]
+        public int Part8Quantity { get; set; }
     }
 }

@@ -249,6 +249,78 @@ namespace RepairMvc.Data.Migrations
                     b.Property<string>("OrderRef")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("Part1ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part1Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part2ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part2Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part3ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part3Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part4ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part4Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part5ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part5Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part6ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part6Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part7ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part7Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Part8ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Part8Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID1")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID2")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID3")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID4")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID5")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID6")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID7")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PartID8")
+                        .HasColumnType("int");
+
                     b.Property<string>("Postcode")
                         .HasColumnType("nvarchar(max)");
 
@@ -260,6 +332,22 @@ namespace RepairMvc.Data.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.HasKey("OrderId");
+
+                    b.HasIndex("Part1ProductId");
+
+                    b.HasIndex("Part2ProductId");
+
+                    b.HasIndex("Part3ProductId");
+
+                    b.HasIndex("Part4ProductId");
+
+                    b.HasIndex("Part5ProductId");
+
+                    b.HasIndex("Part6ProductId");
+
+                    b.HasIndex("Part7ProductId");
+
+                    b.HasIndex("Part8ProductId");
 
                     b.ToTable("Orders");
                 });
@@ -381,6 +469,57 @@ namespace RepairMvc.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("RepairMvc.Domain.Models.Order", b =>
+                {
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part1")
+                        .WithMany()
+                        .HasForeignKey("Part1ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part2")
+                        .WithMany()
+                        .HasForeignKey("Part2ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part3")
+                        .WithMany()
+                        .HasForeignKey("Part3ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part4")
+                        .WithMany()
+                        .HasForeignKey("Part4ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part5")
+                        .WithMany()
+                        .HasForeignKey("Part5ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part6")
+                        .WithMany()
+                        .HasForeignKey("Part6ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part7")
+                        .WithMany()
+                        .HasForeignKey("Part7ProductId");
+
+                    b.HasOne("RepairMvc.Domain.Models.Product", "Part8")
+                        .WithMany()
+                        .HasForeignKey("Part8ProductId");
+
+                    b.Navigation("Part1");
+
+                    b.Navigation("Part2");
+
+                    b.Navigation("Part3");
+
+                    b.Navigation("Part4");
+
+                    b.Navigation("Part5");
+
+                    b.Navigation("Part6");
+
+                    b.Navigation("Part7");
+
+                    b.Navigation("Part8");
                 });
 
             modelBuilder.Entity("RepairMvc.Domain.Models.OrderProduct", b =>
